@@ -1,2 +1,3 @@
 # ThreeFishAssignment
-Crypthography task
+Crypthography task by Skomantas Čepulis
+
