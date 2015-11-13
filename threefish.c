@@ -61,7 +61,7 @@ void threefish(unsigned char *c, const unsigned char *p, const unsigned char *k,
     uint64_t keyC[5];
     uint64_t tweakC[3];
     uint64_t newV[4];
-    uint64_t keySC = 0x1BD11BDAA9FC1A22;
+    uint64_t keySC = 0x1BD11BDAA9FC1A22; // ensures that the extended key cannot be all zeroes
 
     memcpy(txt, p, 4 * sizeof(uint64_t));
     memcpy(keyC, k, 4 * sizeof(uint64_t));
@@ -133,5 +133,5 @@ void threefish(unsigned char *c, const unsigned char *p, const unsigned char *k,
     /* 18 from last round of iteration */
 
 
-    memcpy(c, newV, 4 * sizeof(uint64_t)); // cia gaunasi 4bytes
+    memcpy(c, newV, 4 * sizeof(uint64_t)); //
 }
